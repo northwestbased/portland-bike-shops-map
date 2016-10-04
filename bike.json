@@ -1,0 +1,705 @@
+{
+	"bike-shops": [{
+		"name": "A Better Cycle",
+		"location": {
+			"lat": 45.5045572,
+			"lng": -122.6419793
+		},
+		"website": "http://www.abettercycle.com/",
+		"address": "2324 SE Division St",
+		"number": "503-265-8595"
+	}, {
+		"name": "A Convenient Cycle",
+		"location": {
+			"lat": 38.5515699,
+			"lng": -86.4580671
+		},
+		"website": "http://www.aconvenientcycle.com/",
+		"address": "833 SE Main St #115",
+		"number": "503-267-8284"
+	}, {
+		"name": "Abraham Fixes Bikes",
+		"location": {
+			"lat": 45.548429,
+			"lng": -122.6664573
+		},
+		"website": "http://abrahamfixesbikes.com/",
+		"address": "3508 North Williams Ave",
+		"number": "503-281-6394"
+	}, {
+		"name": "Athletes Lounge",
+		"location": {
+			"lat": 45.5370476,
+			"lng": -122.7060808
+		},
+		"website": "http://www.athleteslounge.com/",
+		"address": "2671 NW Vaughn St",
+		"number": "503-477-5906"
+	}, {
+		"name": "BackPedal Cycle Works",
+		"location": {
+			"lat": 45.4829103,
+			"lng": -122.5896676
+		},
+		"website": "http://www.bpcycleworks.com/",
+		"address": "7126 SE Harold St",
+		"number": "503-891-9842"
+	}, {
+		"name": "Bike Central",
+		"location": {
+			"lat": 45.63638,
+			"lng": -122.855364
+		},
+		"website": "http://www.bike-central.com/",
+		"address": "15707 NW McNamee Rd",
+		"number": "503-227-4439"
+	}, {
+		"name": "The Bike Gallery",
+		"location": {
+			"lat": 45.5180243,
+			"lng": -122.6831896
+		},
+		"website": "http://www.bikegallery.com/",
+		"address": "1001 SW Salmon St",
+		"number": "503-222-3821"
+	}, {
+		"name": "The Bike Gallery",
+		"location": {
+			"lat": 45.5408804,
+			"lng": -122.6085138
+		},
+		"website": "http://www.bikegallery.com/",
+		"address": "5329 NE Sandy Blvd",
+		"number": "503-281-9800"
+	}, {
+		"name": "The Bike Gallery",
+		"location": {
+			"lat": 45.4793577,
+			"lng": -122.6187291
+		},
+		"website": "http://www.bikegallery.com/",
+		"address": "4235 SE Woodstock St",
+		"number": "503-771-3531"
+	}, {
+		"name": "The Bike Gallery",
+		"location": {
+			"lat": 45.4557561,
+			"lng": -122.5806989
+		},
+		"website": "http://www.bikegallery.com/",
+		"address": "9347 SE 82nd Ave",
+		"number": "503-254-2663"
+	}, {
+		"name": "Bike Tires Direct",
+		"location": {
+			"lat": 45.5650036,
+			"lng": -122.5739273
+		},
+		"website": "http://www.biketiresdirect.com/",
+		"address": "5741 NE 87th Ave",
+		"number": "800-682-0570"
+	}, {
+		"name": "Bikes For Humanity PDX",
+		"location": {
+			"lat": 45.49675939999999,
+			"lng": -122.6303533
+		},
+		"website": "http://b4hpdx.org/",
+		"address": "3354 SE Powell St",
+		"number": "503-496-6941"
+	}, {
+		"name": "Black Bird Bicycle Repair",
+		"location": {
+			"lat": 45.5505769,
+			"lng": -122.667464
+		},
+		"website": "http://blackbirdbicyclerepair.com/",
+		"address": "104 N Failing St",
+		"number": "503-975-9974"
+	}, {
+		"name": "Block Bikes",
+		"location": {
+			"lat": 45.5893178,
+			"lng": -122.7553376
+		},
+		"website": "http://blockbikespdx.com/",
+		"address": "7238 N Burlington Ave",
+		"number": "503-819-6839"
+	}, {
+		"name": "Burlingame Bikes",
+		"location": {
+			"lat": 45.4636693,
+			"lng": -122.6848788
+		},
+		"website": "http://www.burlingamebikes.com/",
+		"address": "8431 SW Terwilliger Blvd",
+		"number": "503-208-3735"
+	}, {
+		"name": "Category Six Bicycles",
+		"location": {
+			"lat": 45.55799469999999,
+			"lng": -122.6206272
+		},
+		"website": "http://www.catsixcycles.com/",
+		"address": "4831 NE 42nd Ave",
+		"number": "503-282-1178"
+	}, {
+		"name": "Citybikes Workers Cooperative",
+		"location": {
+			"lat": 45.5220141,
+			"lng": -122.6461271
+		},
+		"website": "http://www.citybikes.coop/",
+		"address": "1914 SE Ankeny St",
+		"number": "503-239-0553"
+	}, {
+		"name": "Citybikes Workers Cooperative",
+		"location": {
+			"lat": 45.5219908,
+			"lng": -122.6578749
+		},
+		"website": "http://www.citybikes.coop/",
+		"address": "734 SE Ankeny St",
+		"number": "503-239-6951"
+	}, {
+		"name": "Clever Cycles",
+		"location": {
+			"lat": 45.5120868,
+			"lng": -122.6564374
+		},
+		"website": "http://clevercycles.com/",
+		"address": "908 SE Hawthorne Blvd",
+		"number": "503-334-1560"
+	}, {
+		"name": "Community Cycling Center",
+		"location": {
+			"lat": 45.5589016,
+			"lng": -122.6475758
+		},
+		"website": "http://www.communitycyclingcenter.org/",
+		"address": "1700 NE Alberta St",
+		"number": "503-287-8786"
+	}, {
+		"name": "Crank",
+		"location": {
+			"lat": 45.5224079,
+			"lng": -122.6380871
+		},
+		"website": "http://crankpdx.com/",
+		"address": "2705 SE Ankeny St",
+		"number": "503-610-8356"
+	}, {
+		"name": "Cyclepath",
+		"location": {
+			"lat": 45.5400909,
+			"lng": -122.6611349
+		},
+		"website": "http://www.cyclepathnw.com/",
+		"address": "2436 NE Martin Luther King Jr Blvd",
+		"number": "503-281-0485"
+	}, {
+		"name": "Cycle Portland Bike Tours",
+		"location": {
+			"lat": 45.5240608,
+			"lng": -122.6727144
+		},
+		"website": "http://www.portlandbicycletours.com/bike-shop/",
+		"address": "117 NW 2nd Ave",
+		"number": "844-739-2453"
+	}, {
+		"name": "Cynergy E-Bikes",
+		"location": {
+			"lat": 45.4968615,
+			"lng": -122.6234629
+		},
+		"website": "http://cynergyebikes.com/",
+		"address": "3822 SE Powell Blvd",
+		"number": "503-719-7678"
+	}, {
+		"name": "The eBike Store",
+		"location": {
+			"lat": 45.57025549999999,
+			"lng": -122.6752607
+		},
+		"website": "http://www.ebikestore.com/",
+		"address": "809 N Rosa Parks Way",
+		"number": "503-360-1432"
+	}, {
+		"name": "evo",
+		"location": {
+			"lat": 45.5212885,
+			"lng": -122.6614561
+		},
+		"website": "http://www.evo.com/portland.aspx",
+		"address": "200 SE MLK Jr. Blvd",
+		"number": "503-972-5850"
+	}, {
+		"name": "Fat Tire Farm",
+		"location": {
+			"lat": 45.5351722,
+			"lng": -122.7072191
+		},
+		"website": "http://fattirefarm.com/",
+		"address": "2714 NW Thurman St",
+		"number": "503-222-3276"
+	}, {
+		"name": "Field Electric Bikes",
+		"location": {
+			"lat": 45.5126475,
+			"lng": -122.6227049
+		},
+		"website": "https://www.facebook.com/FieldElectricMotorcycles",
+		"address": "1408 SE Cesar E Chavez Blvd",
+		"number": "503-454-6686"
+	}, {
+		"name": "GenZe Electric Bikes",
+		"location": {
+			"lat": 45.5138103,
+			"lng": -122.6609955
+		},
+		"website": "http://www.genze.com/genze-portland-experience-center/",
+		"address": "1235 SE Grand Ave",
+		"number": "971-373-6340"
+	}, {
+		"name": "Gladys Bikes",
+		"location": {
+			"lat": 45.5590544,
+			"lng": -122.6356611
+		},
+		"website": "http://gladysbikes.com/#introduction",
+		"address": "2905 NE Alberta St",
+		"number": "971-373-8388"
+	}, {
+		"name": "Go By Bike Shop",
+		"location": {
+			"lat": 45.4994238,
+			"lng": -122.6806834
+		},
+		"website": "http://www.gobybikepdx.com/?page_id=9",
+		"address": "SW Gibbs St &amp; Moody Ave",
+		"number": "971-271-9270"
+	}, {
+		"name": "Goods BMX",
+		"location": {
+			"lat": 45.5432326,
+			"lng": -122.6611886
+		},
+		"website": "http://www.goodsbmx.com/index.asp",
+		"address": "2808 NE MLK Jr Blvd Suite 'O'",
+		"number": "503-282-5408"
+	}, {
+		"name": "Hi-5 Bikes",
+		"location": {
+			"lat": 45.5295662,
+			"lng": -122.6617033
+		},
+		"website": "http://hi-5bikes.com/",
+		"address": "935 NE MLK Jr Blvd",
+		"number": "971-279-2594"
+	}, {
+		"name": "Hollywood Cycling",
+		"location": {
+			"lat": 45.5402503,
+			"lng": -122.6088806
+		},
+		"website": "http://www.hollywoodcycling.us/",
+		"address": "5258 NE Sandy Blvd",
+		"number": "503-281-1671"
+	}, {
+		"name": "Holy Spokes Bike Shop",
+		"location": {
+			"lat": 45.5046053,
+			"lng": -122.6340894
+		},
+		"website": "http://www.holyspokespdx.com/",
+		"address": "3050 SE Division St, Ste 175",
+		"number": "503-265-8980"
+	}, {
+		"name": "Islabikes",
+		"location": {
+			"lat": 45.5076663,
+			"lng": -122.6591733
+		},
+		"website": "http://islabikes.com/us/contact.html",
+		"address": "2113 SE 7th Ave",
+		"number": "503-954-2410"
+	}, {
+		"name": "Joe Bike",
+		"location": {
+			"lat": 45.50819,
+			"lng": -122.6227307
+		},
+		"website": "http://www.joe-bike.com/",
+		"address": "2039 SE 39th Ave",
+		"number": "503-954-2039"
+	}, {
+		"name": "Kenton Cycle Repair",
+		"location": {
+			"lat": 45.5829485,
+			"lng": -122.6873737
+		},
+		"website": "http://www.facebook.com/KentonCycleRepair",
+		"address": "2020 N McClellan St",
+		"number": "503-208-3446"
+	}, {
+		"name": "Lucky 13 Bikes",
+		"location": {
+			"lat": 45.5051626,
+			"lng": -122.6106423
+		},
+		"website": "http://www.lucky13bikes.com/home",
+		"address": "5020 SE Division St",
+		"number": "503-234-1313"
+	}, {
+		"name": "Meticon Bikes",
+		"location": {
+			"lat": 45.4923594,
+			"lng": -122.6021017
+		},
+		"website": "http://meticonbikes.com/",
+		"address": "5925 SE Foster Rd",
+		"number": "503-771-1737"
+	}, {
+		"name": "Metropolis Cycle Repair",
+		"location": {
+			"lat": 45.5394429,
+			"lng": -122.6670426
+		},
+		"website": "http://www.metropoliscycles.com/",
+		"address": "2249 N Williams Ave",
+		"number": "503-287-7116"
+	}, {
+		"name": "The Missing Link",
+		"location": {
+			"lat": 45.5487449,
+			"lng": -122.5888144
+		},
+		"website": "http://www.missinglinkpdx.com/",
+		"address": "7215 NE Sandy Blvd",
+		"number": "503-740-3539"
+	}, {
+		"name": "The Missing Link",
+		"location": {
+			"lat": 45.4791783,
+			"lng": -122.615057
+		},
+		"website": "http://www.missinglinkpdx.com/",
+		"address": "4635 SE Woodstock Blvd",
+		"number": "503-206-8854"
+	}, {
+		"name": "Mountain Shop",
+		"location": {
+			"lat": 45.5343129,
+			"lng": -122.6248274
+		},
+		"website": "http://www.mountainshop.net/adventure-bike-studio/",
+		"address": "1510 NE 37th Ave",
+		"number": "503-288-6768"
+	}, {
+		"name": "North Portland Bike Works",
+		"location": {
+			"lat": 45.551994,
+			"lng": -122.6752912
+		},
+		"website": "http://northportlandbikeworks.org/",
+		"address": "3978 N Mississippi Ave",
+		"number": "503-287-1098"
+	}, {
+		"name": "Norther Cycles",
+		"location": {
+			"lat": 45.5627881,
+			"lng": -122.6749834
+		},
+		"website": "http://www.northercycles.com/",
+		"address": "5515 N Albina Ave",
+		"number": "971-303-2809"
+	}, {
+		"name": "NW Pro Gear",
+		"location": {
+			"lat": 45.4787417,
+			"lng": -122.5680638
+		},
+		"website": "http://www.nwprogear.com",
+		"address": "9240 SE Woodstock Blvd",
+		"number": "503-901-9546"
+	}, {
+		"name": "Oregon Bike Shop",
+		"location": {
+			"lat": 45.51955960000001,
+			"lng": -122.5802946
+		},
+		"website": "http://oregonbikeshop.com/",
+		"address": "418 SE 81st Ave",
+		"number": "503-575-1804"
+	}, {
+		"name": "The Outer Rim",
+		"location": {
+			"lat": 45.53372660000001,
+			"lng": -122.5530806
+		},
+		"website": "http://www.outerrimbicycles.com/",
+		"address": "10625 NE Halsey St",
+		"number": "503-278-3235"
+	}, {
+		"name": "Pedal Bike Tours",
+		"location": {
+			"lat": 45.5216517,
+			"lng": -122.6727872
+		},
+		"website": "http://pedalbiketours.com/bike-tours/portland.shtml",
+		"address": "133 SW 2nd Ave",
+		"number": "503-243-2453"
+	}, {
+		"name": "Pedego Electric Bikes",
+		"location": {
+			"lat": 45.5197034,
+			"lng": -122.6732773
+		},
+		"website": "http://www.pedegoelectricbikes.com/",
+		"address": "412 SW 2nd Ave",
+		"number": "503-241-2912"
+	}, {
+		"name": "Performance Bicycle",
+		"location": {
+			"lat": 45.5182485,
+			"lng": -122.5603991
+		},
+		"website": "http://www.performancebike.com/bikes/TopCategories_10052_10551_-1",
+		"address": "9988 SE Washington St",
+		"number": "503-408-8150"
+	}, {
+		"name": "Portland Bicycle Studio",
+		"location": {
+			"lat": 45.53443559999999,
+			"lng": -122.6863594
+		},
+		"website": "http://portlandbicyclestudio.com/",
+		"address": "1435 NW Raleigh St",
+		"number": "503-335-8356"
+	}, {
+		"name": "PSU Bike Hub",
+		"location": {
+			"lat": 45.5111922,
+			"lng": -122.6825637
+		},
+		"website": "https://www.pdx.edu/bikehub/",
+		"address": "1818 SW 6th Ave",
+		"number": "503-725-9006"
+	}, {
+		"name": "REI",
+		"location": {
+			"lat": 45.5289172,
+			"lng": -122.6857603
+		},
+		"website": "http://www.rei.com/",
+		"address": "1405 NW Johnson St",
+		"number": "503-221-1938"
+	}, {
+		"name": "Recumbent PDX",
+		"location": {
+			"lat": 45.5122156,
+			"lng": -122.6449371
+		},
+		"website": "http://recumbentpdx.com/",
+		"address": "2025 SE Hawthorne Blvd",
+		"number": "503-231-1000"
+	}, {
+		"name": "Revolver Bicycle",
+		"location": {
+			"lat": 45.5701639,
+			"lng": -122.6824141
+		},
+		"website": "http://www.revolverbikes.com/",
+		"address": "6509 N Interstate Ave",
+		"number": "503-285-1084"
+	}, {
+		"name": "Ride Yr Bike",
+		"location": {
+			"lat": 45.493426,
+			"lng": -122.602748
+		},
+		"website": "http://www.rideyrbike.com/",
+		"address": "5829 SE Gladstone St",
+		"number": "503-358-6066"
+	}, {
+		"name": "Rivelo",
+		"location": {
+			"lat": 45.5059061,
+			"lng": -122.661952
+		},
+		"website": "http://www.rivelopdx.com/",
+		"address": "401 SE Caruthers St",
+		"number": "971-266-3551"
+	}, {
+		"name": "River City Bicycles",
+		"location": {
+			"lat": 45.5177631,
+			"lng": -122.6614456
+		},
+		"website": "http://www.rivercitybicycles.com/",
+		"address": "706 SE MLK Jr Blvd",
+		"number": "503-233-5973"
+	}, {
+		"name": "River City Bicycles Outlet",
+		"location": {
+			"lat": 45.5162937,
+			"lng": -122.6599458
+		},
+		"website": "http://rivercitybicycles.com/about/outlet-home-pg128.htm",
+		"address": "534 SE Belmont St",
+		"number": "503-446-2205"
+	}, {
+		"name": "Rose City Recumbent Cycles",
+		"location": {
+			"lat": 45.4939316,
+			"lng": -122.6041227
+		},
+		"website": "http://www.rosecityrecumbentcycles.com",
+		"address": "5720 SE Center St",
+		"number": "971-337-5685"
+	}, {
+		"name": "Rosewood Bikes",
+		"location": {
+			"lat": 45.519067,
+			"lng": -122.4970141
+		},
+		"website": "http://www.rosewoodbikes.org/",
+		"address": "16126 SE Stark St",
+		"number": "503-568-1938"
+	}, {
+		"name": "Sellwood Cycle Repair",
+		"location": {
+			"lat": 45.46628339999999,
+			"lng": -122.6531758
+		},
+		"website": "http://www.sellwoodcycle.com/",
+		"address": "7953 SE 13th Ave",
+		"number": "503-233-9392"
+	}, {
+		"name": "Seven Corners Cycles",
+		"location": {
+			"lat": 45.4997351,
+			"lng": -122.6443588
+		},
+		"website": "http://www.7-corners.com/",
+		"address": "3218 SE 21st Ave",
+		"number": "503-230-0317"
+	}, {
+		"name": "Southwest Bicycle",
+		"location": {
+			"lat": 45.4675379,
+			"lng": -122.7142029
+		},
+		"website": "http://www.southwestbicycle.com/",
+		"address": "3605 SW Multnomah Blvd",
+		"number": "503-246-0333"
+	}, {
+		"name": "Splendid Cycles",
+		"location": {
+			"lat": 45.50433330000001,
+			"lng": -122.6616804
+		},
+		"website": "http://www.splendidcycles.com/",
+		"address": "407 SE Ivon St",
+		"number": "503-954-2620"
+	}, {
+		"name": "Tuite Bicycle Repair",
+		"location": {
+			"lat": 45.5768435,
+			"lng": -122.6895768
+		},
+		"website": "http://www.tuitebicyclerepair.com/",
+		"address": "2234 N Lombard St",
+		"number": "503-477-5570"
+	}, {
+		"name": "Twenty-First Ave Bicycles",
+		"location": {
+			"lat": 45.5294639,
+			"lng": -122.6942445
+		},
+		"website": "http://www.21stbikes.com/",
+		"address": "916 NW 21st Ave",
+		"number": "503-222-2851"
+	}, {
+		"name": "Universal Cycles",
+		"location": {
+			"lat": 45.5226274,
+			"lng": -122.6432656
+		},
+		"website": "http://www.universalcycles.com/",
+		"address": "2202 E Burnside St",
+		"number": "503-943-6152"
+	}, {
+		"name": "Upcycles",
+		"location": {
+			"lat": 45.57193900000001,
+			"lng": -122.6561156
+		},
+		"website": "http://upcyclespdx.com/",
+		"address": "911 NE Dekum St",
+		"number": "503-388-0305"
+	}, {
+		"name": "Veloce Bicycles",
+		"location": {
+			"lat": 45.5119149,
+			"lng": -122.6325078
+		},
+		"website": "http://www.velocebicycles.com/",
+		"address": "3202 SE Hawthorne Blvd",
+		"number": "503-234-8400"
+	}, {
+		"name": "Velo Cult",
+		"location": {
+			"lat": 45.5370773,
+			"lng": -122.6202361
+		},
+		"website": "http://velocult.com/",
+		"address": "1969 NE 42nd Ave",
+		"number": "503-922-2012"
+	}, {
+		"name": "Waterfront Bicycles",
+		"location": {
+			"lat": 45.5213049,
+			"lng": -122.6708605
+		},
+		"website": "http://www.waterfrontbikes.com/",
+		"address": "10 SW Ash St, #100",
+		"number": "503-227-1719"
+	}, {
+		"name": "Weir's Cyclery",
+		"location": {
+			"lat": 45.5825194,
+			"lng": -122.7235576
+		},
+		"website": "https://www.facebook.com/weirs.cyclery",
+		"address": "5279 N Lombard St",
+		"number": "503-283-3883"
+	}, {
+		"name": "West End Bikes",
+		"location": {
+			"lat": 45.5225499,
+			"lng": -122.682258
+		},
+		"website": "http://westendbikespdx.com/",
+		"address": "1111 SW Stark St",
+		"number": "503-208-2933"
+	}, {
+		"name": "Western Bikeworks",
+		"location": {
+			"lat": 45.530276,
+			"lng": -122.688777
+		},
+		"website": "http://www.westernbikeworks.com/visit-store",
+		"address": "1015 NW 17th St",
+		"number": "503-342-9985"
+	}, {
+		"name": "WTF (Well Tuned, Fast) Bikes",
+		"location": {
+			"lat": 45.5005058,
+			"lng": -122.6545118
+		},
+		"website": "http://wtfbikes.blogspot.com/",
+		"address": "3117 SE Milwaukie Ave",
+		"number": "503-232-4983"
+	}]
+}

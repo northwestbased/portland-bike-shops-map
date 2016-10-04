@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>Portland Bike Shops</title>
+    <style>
+      html, body {
+        height: 100%;
+	width:100%;
+	padding:0;
+	margin:0;
+      }
+      #map {
+        height: 100%;
+	width: 100%;
+	opacity:.5;
+	pointer-events:none;
+      }
+	#start{
+		width:60%;
+		margin:5% 0 0 5%;
+		position:absolute;
+		z-index:1;
+		background:rgba(230,230,230, 0.6);
+		padding:1em;
+		border-radius:4px;
+	}
+	#start div{
+		padding-bottom:.5em;
+		font-size:2em;
+		font-family:sans;
+	}
+	#start input[type="text"]{
+		padding:0 .5em;
+		background:white;
+		width:60%;
+		height:2em;
+		font-size:1.8em;
+	}
+	#start input[type="submit"]{
+		width:35%;
+		height:2em;
+		font-size:1.8em;
+		padding:0 1%;
+		min-width:5em;
+	}
+	::-webkit-input-placeholder{
+		color:#222;
+		font-style:italic;
+	}
+
+    </style>
+  </head>
+  <body>
+    <div id="start">
+	<div>Enter your location to get directions to the closest Portland bike shop.</div>
+        <input type="text" placeholder="location">
+	<input type="submit">
+    </div>
+    <div id="map"></div>
+    <script>
+
+	$("input[type='submit']").click(function(){
+		var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" + $("input[type='text']").val() + " portland";
+		$.get(url, function(data){
+			my_location = data.results[0].geometry.location;
+			var marker = new google.maps.Marker({
+				position:my_location,
+				map: map,
+				title: "Your Location",
+				icon: "blue_icon.png"
+			});
+			map.panTo(my_location);
+			closest_bike_shop = bike_shops[0];
+			closest_distance = undefined;
+
+			for(var i = 1; i < bike_shops.length; ++i){
+				var bike_shop = bike_shops[i];
+				delta_lat = my_location.lat - bike_shop.location.lat
+				delta_long = Math.abs(my_location.lng) - Math.abs(bike_shop.location.lng);
+				distance = Math.sqrt(delta_lat * delta_lat + delta_long * delta_long)
+				if(closest_distance == undefined || distance < closest_distance){
+					closest_distance = distance;
+					closest_bike_shop = bike_shop;
+				}
+			}
+			var directionsService = new google.maps.DirectionsService;
+			var directionsDisplay = new google.maps.DirectionsRenderer;
+			directionsDisplay.setMap(map);
+			directionsDisplay.setOptions({suppressMarkers: true});
+			directionsService.route({
+				origin:my_location,
+				destination:closest_bike_shop.location,
+				travelMode: 'BICYCLING'
+			}, function(response, status) {
+				directionsDisplay.setDirections(response);
+			});
+			
+			
+		});
+
+		$("#map").animate({opacity:1}, 1000);
+		$("#map").css({"pointer-events": "auto"});
+		$("#start").fadeOut(800);
+	});
+
+      $.getJSON("bike.json", function(json){
+		bike_shops = json["bike-shops"];
+	});
+
+
+      var map;
+      function initMap(){
+	var info_window = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 45.52, lng: -122.681944},
+          zoom: 15
+        });
+
+
+	
+	var markers = [];
+	for(var i = 0; i < bike_shops.length; ++i){
+		var data = bike_shops[i];
+		var marker = new google.maps.Marker({
+			position: data["location"],
+			map: map,
+			title: data["name"]
+		});
+		(function (marker, data) {
+			google.maps.event.addListener(marker, 'click', function(event) {
+				var html_content = "<div class='title'><a target='_blank' href='" + data["website"] + "'>"+ data["name"] + "</a></div>" + 
+				"<div class='address'>" + data["address"] + "</div><div class='number'>" + data["number"] + "</div>";
+				info_window.setContent(html_content);
+				info_window.open(map, marker);
+			});
+		})(marker, data);
+	}
+    }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLbqPwVKwajmtc89x0DSEaag8D15GzHY&libraries=drawing&callback=initMap"
+    async defer></script>
+  </body>
+</html>
+
