@@ -56,7 +56,7 @@
     <div id="start">
 	<div>Enter your location to get directions to the closest Portland bike shop.</div>
         <input type="text" placeholder="location">
-	<input type="submit">
+	<input type="submit" text="Submit">
     </div>
     <div id="map"></div>
     <script>
@@ -101,13 +101,21 @@
 		});
 
 		$("#map").animate({opacity:1}, 1000);
-		$("#map").css({"pointer-events": "auto"});
+		$("#map").css({"pointer-events": "all"});
 		$("#start").fadeOut(800);
 	});
 
       $.getJSON("bike.json", function(json){
 		bike_shops = json["bike-shops"];
+		initMap_wait();;
 	});
+
+      function initMap_wait(){
+	if(typeof google == "undefined")
+		setTimeout(initMap_wait, 500)
+	else
+		initMap();
+      }
 
 
       var map;
@@ -140,7 +148,7 @@
 	}
     }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLbqPwVKwajmtc89x0DSEaag8D15GzHY&libraries=drawing&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLbqPwVKwajmtc89x0DSEaag8D15GzHY&libraries=drawing"
     async defer></script>
   </body>
 </html>
