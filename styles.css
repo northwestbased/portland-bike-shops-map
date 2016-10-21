@@ -1,45 +1,68 @@
 html,
 body {
+    background:#DDD;
     height: 100%;
     width: 100%;
     padding: 0;
     margin: 0;
 }
+.hr{
+	width:100%;
+	height:4px;
+	background:#666;
+	margin:10px auto;
+	border-radius:10px;
+}
+.hr.skinny{
+	height:1px;
+}
+a{
+	word-wrap:break-word;
+}
+#sidebar{
+	font-family:sans;
+}
+#title{
+	text-align:center;
+	font-size:1.5em;
+	font-weight:bold;
+}
+
+#shop_detail .title{
+	font-size:1.2em;
+}
+
+label{
+	width:60%;
+	display:inline-block;
+        float:left;
+}
 #map {
     height: 100%;
-    width: 100%;
-    opacity: .5;
-    pointer-events: none;
+    width: 80%;
+    float:right;
 }
-#start {
-    width: 60%;
-    margin: 5% 0 0 5%;
-    position: absolute;
-    z-index: 1;
-    background: rgba(230, 230, 230, 0.6);
-    padding: 1em;
-    border-radius: 4px;
+input[type="text"]{
+    width:96%;
+    padding:2%;
+    margin:10px 0;
 }
-#start div {
-    padding-bottom: .5em;
-    font-size: 2em;
-    font-family: sans;
+button:hover{
+	text-decoration:underline;
+	cursor:pointer;
 }
-#start input[type="text"] {
-    padding: 0 .5em;
-    background: white;
-    width: 60%;
-    height: 2em;
-    font-size: 1.8em;
+button{
+    width:35%;
+    padding:4px;
+    font-size:1em;
+    background:#666;
+    border:0px;
+    color:white;
+    border-radius:5px;
+    float:right;
 }
-#start input[type="submit"] {
-    width: 35%;
-    height: 2em;
-    font-size: 1.8em;
-    padding: 0 1%;
-    min-width: 5em;
-}
-::-webkit-input-placeholder {
-    color: #222;
-    font-style: italic;
+#sidebar{
+	padding:2%;
+	width:16%;
+	float:left;
 }
