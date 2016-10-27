@@ -49,7 +49,7 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
     scope.bikeshops = data["bike-shops"];
 
     (function wait(){
-      if(typeof google == "undefined")
+      if(typeof google == "undefined" || typeof scope.map == "undefined") 
         return setTimeout(wait, 100);
       for (var i = 0; i < scope.bikeshops.length; ++i) {
         var data = scope.bikeshops[i];
