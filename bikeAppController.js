@@ -1,19 +1,30 @@
+var bikeApp = angular.module('bikeApp', []);
 bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
+
+  scope.yourLocation = undefined;
+  scope.previous_icon = undefined;
 
   scope.sort = function() {
   var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" +
     $("input[type='text']").val() + " portland";
     $.get(url, function(data) {
+
+      if (scope.yourLocation != undefined)
+        scope.yourLocation.setMap(null);
+
       my_location = data.results[0].geometry.location;
       var marker = new google.maps.Marker({
         position: my_location,
         map: scope.map,
         icon: "purple_icon.png"
       });
+
+      scope.yourLocation = marker;
+
       scope.map.panTo(my_location);
       var info_window = new google.maps.InfoWindow();
       info_window.setContent("Your Location");
-      info_window.open(scope.map, marker);
+      info_window.open(map, marker);
       bike_shops = scope.bikeshops;
       for (var i = 0; i < bike_shops.length; ++i) {
         delta_lat = my_location.lat - bike_shops[i].location.lat
@@ -34,46 +45,53 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
   };
 
 
-  scope.previous_icon = undefined;
   http.get('bike.json').success(function(data) {
     scope.bikeshops = data["bike-shops"];
 
-
-    while(typeof google == undefined){
-      console.log("undefined");
-    }
-
-    for (var i = 0; i < scope.bikeshops.length; ++i) {
-      var data = scope.bikeshops[i];
-      scope.bikeshops[i].marker = new google.maps.Marker({
-        position: data["location"],
-        map: scope.map,
-        title: data["name"],
-        icon: "green_icon.png"
-      });
-      (function(bikeshop) {
-        google.maps.event.addListener(bikeshop.marker, 'hover',
+    (function wait(){
+      if(typeof google == "undefined")
+        return setTimeout(wait, 100);
+      for (var i = 0; i < scope.bikeshops.length; ++i) {
+        var data = scope.bikeshops[i];
+        scope.bikeshops[i].marker = new google.maps.Marker({
+          position: data["location"],
+          map: scope.map,
+          title: data["name"],
+          icon: "green_icon.png"
+        });
+        (function(bikeshop) {
+          google.maps.event.addListener(bikeshop.marker, 'click',
           function(event) {
-            if (scope.previous_icon != undefined)
+            if(scope.previous_icon != undefined)
               scope.previous_icon.setIcon("green_icon.png");
             bikeshop.marker.setIcon("blue_icon.png");
             scope.previous_icon = bikeshop.marker;
           });
-      })(scope.bikeshops[i]);
-    }
+        })(scope.bikeshops[i]);
+      }
+    }())
   });
+
+  scope.detail_it = function(bikeshop){
+    if (scope.previous_icon != undefined)
+      scope.previous_icon.setIcon("green_icon.png");
+    bikeshop.marker.setIcon("blue_icon.png");
+    scope.previous_icon = bikeshop.marker;
+    scope.map.panTo(bikeshop.location)
+  };
   
   var init = function(){
-    while(typeof google == undefined){
-      console.log("undefined");
-    }
-    scope.map = new google.maps.Map(document.getElementById('map'), {
-      center: {
-        lat: 45.5212,
-        lng: -122.6271
-      },
-      zoom: 13
-    });
+    (function wait(){
+      if(typeof google == "undefined")
+        return setTimeout(wait, 100);
+      scope.map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 45.5212,
+          lng: -122.6271
+        },
+        zoom: 13
+      });
+    }())
     }();
   
 }]);

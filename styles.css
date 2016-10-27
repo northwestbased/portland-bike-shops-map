@@ -13,9 +13,6 @@ body {
 	margin:10px auto;
 	border-radius:10px;
 }
-.hr.skinny{
-	height:1px;
-}
 a{
 	word-wrap:break-word;
 }
@@ -26,6 +23,16 @@ a{
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;
+}
+#shop_detail:hover{
+	background:#CCC;
+}
+
+#shop_detail + #shop_detail{
+	border-top:1px solid black;
+}
+#shop_detail{
+	padding:10px 0;
 }
 
 #shop_detail .title{
@@ -40,18 +47,18 @@ label{
 #map {
     height: 100%;
     width: 80%;
-    float:right;
+    float:left;
 }
 input[type="text"]{
     width:96%;
     padding:2%;
     margin:10px 0;
 }
-button:hover{
+.button:hover{
 	text-decoration:underline;
 	cursor:pointer;
 }
-button{
+.button{
     width:35%;
     padding:4px;
     font-size:1em;
@@ -59,10 +66,15 @@ button{
     border:0px;
     color:white;
     border-radius:5px;
-    float:right;
 }
 #sidebar{
-	padding:2%;
+	padding:0 2%;
 	width:16%;
-	float:left;
+	float:right;
+        overflow-y:scroll;
+	height:100%;
+}
+
+#sidebar #title{
+    margin:40px 0 30px 0;;
 }

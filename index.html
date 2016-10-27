@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="bikeApp">
 
 <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Portland Bike Shops</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLbqPwVKwajmtc89x0DSEaag8D15GzHY&libraries=drawing" async defer></script>
+    <script src="bikeAppController.js"></script>
 </head>
 <body>
-    <div id="sidebar">
-	<div id="title">PDX BIKE SHOPS</div>
-        <div class="hr"></div>
-	<div>Enter your location to find the closest Portland bike shops.</div>
-	<input type="text" placeholder="location" autofocus="autofocus">
-		<!--<label><input type="checkbox">show closed shops</label>-->
-		<button>Submit</button>
- 		<br>
- 		<br>
- 		<br>
+  <div id="map"></div>
+  <div id="sidebar" ng-controller="BikeCtrl">
+    <div id="title">PDX BIKE SHOPS</div>
     <div class="hr"></div>
-    <div id="shop_detail"></div>
+    <div>Enter your location to sort bike shops by distance.</div>
+    <form ng-submit="sort()">
+      <input type="text" placeholder="location" autofocus="autofocus">
+      <!--<label><input type="checkbox">show closed shops</label>-->
+      <input class="button" type="submit" value="Submit">
+    </form>
+    <div class="hr"></div>
+    <div id="shop_detail" ng-repeat="shop in bikeshops" ng-mouseover="detail_it(shop)">
+      <div class='title'>{{shop.name}}</div>
+      <a target='_blank' href='{{shop.website}}'>{{shop.website}}</a>
+      <div class='address'>{{shop.address}}</div>
+      <div class='number'>{{shop.number}}</div>
     </div>
-    <div id="map"></div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="script.js" async defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYLbqPwVKwajmtc89x0DSEaag8D15GzHY&libraries=drawing" async defer></script>
+  </div>
 </body>
 </html>
