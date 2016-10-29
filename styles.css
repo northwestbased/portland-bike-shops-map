@@ -1,6 +1,6 @@
 html,
 body {
-    background:#DDD;
+    background:#EEE;
     height: 100%;
     width: 100%;
     padding: 0;
@@ -13,26 +13,30 @@ body {
 	margin:10px auto;
 	border-radius:10px;
 }
-a{
+#sidebar a:hover{
+	text-decoration:underline;
+}
+#sidebar a{
+	color:#346dc9;
 	word-wrap:break-word;
+	text-decoration:none;
 }
-#sidebar{
-	font-family:sans;
-}
+
 #title{
 	text-align:center;
 	font-size:1.5em;
 	font-weight:bold;
 }
 #shop_detail:hover{
-	background:#CCC;
+	border-color:#4886ea;
+	cursor:pointer;
 }
 
-#shop_detail + #shop_detail{
-	border-top:1px solid black;
-}
 #shop_detail{
-	padding:10px 0;
+    border: 1px solid #CCC;
+    border-radius:4px;
+    margin: 10px 0;;
+    padding: 5px;
 }
 
 #shop_detail .title{
@@ -68,13 +72,20 @@ input[type="text"]{
     border-radius:5px;
 }
 #sidebar{
-	padding:0 2%;
-	width:16%;
+	font-family:sans;
+	width:20%;
 	float:right;
-        overflow-y:scroll;
 	height:100%;
+}
+#sidebar #inner{
+	padding-right:10px;
+	padding-left:9px;
+	border-left:1px solid #CCC;
+	height:100%;
+        overflow-y:scroll;
+	overflow-x:hidden;
 }
 
 #sidebar #title{
-    margin:40px 0 30px 0;;
+	    padding:40px 0 30px 0;
 }

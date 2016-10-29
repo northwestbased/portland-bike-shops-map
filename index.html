@@ -13,20 +13,22 @@
 <body>
   <div id="map"></div>
   <div id="sidebar" ng-controller="BikeCtrl">
-    <div id="title">PDX BIKE SHOPS</div>
-    <div class="hr"></div>
-    <div>Enter your location to sort bike shops by distance.</div>
-    <form ng-submit="sort()">
-      <input type="text" placeholder="location" autofocus="autofocus">
-      <!--<label><input type="checkbox">show closed shops</label>-->
-      <input class="button" type="submit" value="Submit">
-    </form>
-    <div class="hr"></div>
-    <div id="shop_detail" ng-repeat="shop in bikeshops" ng-mouseover="detail_it(shop)">
-      <div class='title'>{{shop.name}}</div>
-      <a target='_blank' href='{{shop.website}}'>{{shop.website}}</a>
-      <div class='address'>{{shop.address}}</div>
-      <div class='number'>{{shop.number}}</div>
+    <div id="inner">
+      <div id="title">PDX BIKE SHOPS</div>
+      <div class="hr"></div>
+      <div>Enter a location to sort list by distance.</div>
+      <form ng-submit="sort()">
+        <input type="text" placeholder="location" autofocus="autofocus">
+        <!--<label><input type="checkbox">show closed shops</label>-->
+        <input class="button" type="submit" value="Submit">
+      </form>
+      <div class="hr"></div>
+      <div id="shop_detail" ng-repeat="shop in bikeshops" ng-mouseover="mouseover(shop)" ng-click="click_detail(shop)">
+        <div class='title'>{{shop.name}}</div>
+        <a target='_blank' href='{{shop.website}}'>{{shop.website}}</a>
+        <div class='address'>{{shop.address}}</div>
+        <div class='number'>{{shop.number}}</div>
+      </div>
     </div>
   </div>
 </body>

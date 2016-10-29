@@ -5,10 +5,9 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
   scope.previous_icon = undefined;
 
   scope.sort = function() {
-  var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" +
+    var url = "https://maps.googleapis.com/maps/api/geocode/json?address=" +
     $("input[type='text']").val() + " portland";
     $.get(url, function(data) {
-
       if (scope.yourLocation != undefined)
         scope.yourLocation.setMap(null);
 
@@ -44,6 +43,7 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
     });
   };
 
+  scope.infowindow = undefined;
 
   http.get('bike.json').success(function(data) {
     scope.bikeshops = data["bike-shops"];
@@ -66,13 +66,20 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
               scope.previous_icon.setIcon("green_icon.png");
             bikeshop.marker.setIcon("blue_icon.png");
             scope.previous_icon = bikeshop.marker;
+            scope.infowindow = openInfoWindow(scope.map, scope.infowindow, bikeshop);
           });
         })(scope.bikeshops[i]);
       }
     }())
   });
+  scope.click_detail = function(bikeshop){
+    scope.map.setZoom(20);
+    scope.infowindow = openInfoWindow(scope.map, scope.infowindow, bikeshop);
+  }
 
-  scope.detail_it = function(bikeshop){
+  scope.mouseover = function(bikeshop){
+    if (scope.map.getZoom() != 14 && bikeshop.marker != scope.previous_icon)
+	scope.map.setZoom(14);
     if (scope.previous_icon != undefined)
       scope.previous_icon.setIcon("green_icon.png");
     bikeshop.marker.setIcon("blue_icon.png");
@@ -92,6 +99,34 @@ bikeApp.controller('BikeCtrl', ['$scope', '$http', function (scope, http){
         zoom: 13
       });
     }())
-    }();
+  }();
   
 }]);
+
+function openInfoWindow(map, infowindow, bikeshop){
+  if(infowindow != undefined)
+    infowindow.close();
+  var content = "<div class='title'>"+bikeshop.name+"</div>" +
+        "<a target='_blank' href='"+bikeshop.website+"'>"+bikeshop.website+"</a>" +
+        "<div class='address'>"+bikeshop.address+"</div>" +
+        "<div class='number'>"+bikeshop.number+"</div>";
+  infowindow = new google.maps.InfoWindow({
+    content: content
+  });
+  infowindow.open(map, bikeshop.marker);
+  return infowindow;
+}
+
+function smoothZoom (map, max, cnt) {
+    if (cnt >= max) {
+        return;
+    }
+    else {
+        z = google.maps.event.addListener(map, 'zoom_changed', function(event){
+            google.maps.event.removeListener(z);
+            smoothZoom(map, max, cnt + 1);
+        });
+        setTimeout(function(){map.setZoom(cnt)}, 40);
+    }
+}  
+
